@@ -1,0 +1,88 @@
+create database library;
+use library;
+
+
+-- Create the staff table
+CREATE TABLE staff (
+    STAFF_ID VARCHAR(10) PRIMARY KEY,
+    NAME VARCHAR(100),
+    CONTACT VARCHAR(15)
+);
+
+select * from staff;
+
+
+-- Insert all records
+INSERT INTO staff (STAFF_ID, NAME, CONTACT) VALUES
+('S001', 'RAGHAV KUMAR', '786950432'),
+('S002', 'PRAKASH KUMAR', '865427346'),
+('S003', 'SHOBHIT TRIVEDI', '963745126'),
+('S004', 'AJAY SINGH', '956431634'),
+('S005', 'UMESH JHA', '886757439');
+
+
+-- Create the users table
+CREATE TABLE users (
+    USER_ID VARCHAR(50) PRIMARY KEY,
+    NAME VARCHAR(100),
+    PASSWORD VARCHAR(50),
+    CONTACT VARCHAR(15)
+);
+
+-- Insert the single record
+INSERT INTO users (USER_ID, NAME, PASSWORD, CONTACT) VALUES
+('UD01', 'Ura Designs', 'UraD123', '1234567890');
+
+-- Create the staff table
+CREATE TABLE staff (
+    STAFF_ID VARCHAR(10) PRIMARY KEY,
+    NAME VARCHAR(100),
+    CONTACT VARCHAR(15)
+);
+
+-- Insert all records
+INSERT INTO staff (STAFF_ID, NAME, CONTACT) VALUES
+('S001', 'RAGHAV KUMAR', '786950432'),
+('S002', 'PRAKASH KUMAR', '865427346'),
+('S003', 'SHOBHIT TRIVEDI', '963745126'),
+('S004', 'AJAY SINGH', '956431634'),
+('S005', 'UMESH JHA', '886757439');
+
+
+-- Create the table
+CREATE TABLE books (
+    BOOK_ID VARCHAR(10) PRIMARY KEY,
+    category VARCHAR(50),
+    NAME VARCHAR(100),
+    AUTHOR VARCHAR(100),
+    COPIES INT
+);
+
+-- Insert all rows
+INSERT INTO books (BOOK_ID, category, NAME, AUTHOR, COPIES) VALUES
+('B001', 'DATA STRUCTURE & ALGORITHMS', 'ALGORITHMS MADE EASY', 'NARSHIMA KARUMANCHI', 10),
+('B002', 'JAVA', 'HEAD FIRST JAVA', 'KATHY SIERRA BERT BATES', 8),
+('B003', 'INDIAN HISTORY', 'INDIAS ANCIENT PAST', 'R.S SHARMA', 12),
+('B004', 'INDIAN POLITICS', 'THE GAME OF VOTES', 'FARHAT BASIR KHAN', 10),
+('B005', 'NOVEL', 'THE GREAT GATSBY', 'F.SCOTT FITZGERALD', 6),
+('B006', 'MYSQL', 'MURACHS MYSQL', 'JOEL MURACH', 5),
+('B007', 'GEOGRAPHY', 'PRISONERS OF GEOGRAPHY', 'TIM MARSHALL', 7),
+('B008', 'COMIC', 'THE SECRET LIFE OF DEBBIE G. COSMOS', 'VIHA BA TRA', 15),
+('B009', 'SCIENCE', '', 'CARL SAGAN', 20),   -- NAME is empty as per source
+('B010', 'BIOLOGY', 'CONCEPTS OF BIOLOGY', 'REBECCE ROUSH', 14);
+
+-- Example query: Find all the books
+SELECT * FROM books;
+
+show databases;
+
+rename table users to admin;
+
+
+
+
+
+
+
+
+
