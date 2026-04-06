@@ -35,6 +35,7 @@ public class Dashboard extends javax.swing.JFrame {
         btnAddStaff = new javax.swing.JButton();
         btnRemoveStaff = new javax.swing.JButton();
         lblDesigner = new javax.swing.JLabel();
+        btnEditAdmin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Dashboard");
@@ -51,37 +52,51 @@ public class Dashboard extends javax.swing.JFrame {
         btnBooksAvailable.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnBooksAvailable.setText("Books Available");
         btnBooksAvailable.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
+        btnBooksAvailable.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         btnAddBooks.setBackground(new java.awt.Color(153, 255, 153));
         btnAddBooks.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnAddBooks.setText("Add Book(s)");
         btnAddBooks.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
+        btnAddBooks.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAddBooks.addActionListener(this::btnAddBooksActionPerformed);
 
         btnRemoveBooks.setBackground(new java.awt.Color(153, 255, 102));
         btnRemoveBooks.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnRemoveBooks.setText("Remove Book(s)");
         btnRemoveBooks.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
+        btnRemoveBooks.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         btnStaffDetails.setBackground(new java.awt.Color(255, 255, 204));
         btnStaffDetails.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnStaffDetails.setText("Staff Details");
         btnStaffDetails.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
+        btnStaffDetails.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnStaffDetails.addActionListener(this::btnStaffDetailsActionPerformed);
 
         btnAddStaff.setBackground(new java.awt.Color(255, 255, 153));
         btnAddStaff.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnAddStaff.setText("Add Staff");
         btnAddStaff.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
+        btnAddStaff.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAddStaff.addActionListener(this::btnAddStaffActionPerformed);
 
         btnRemoveStaff.setBackground(new java.awt.Color(255, 255, 102));
         btnRemoveStaff.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnRemoveStaff.setText("Remove Staff");
         btnRemoveStaff.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
+        btnRemoveStaff.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         lblDesigner.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         lblDesigner.setText("Designed by UraDesigns 2026");
+
+        btnEditAdmin.setBackground(new java.awt.Color(0, 0, 102));
+        btnEditAdmin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnEditAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditAdmin.setText("EDIT ADMIN");
+        btnEditAdmin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        btnEditAdmin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEditAdmin.addActionListener(this::btnEditAdminActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -107,7 +122,9 @@ public class Dashboard extends javax.swing.JFrame {
                                 .addComponent(btnRemoveStaff, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(213, 213, 213)
-                        .addComponent(lblDesigner)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblDesigner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnEditAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(54, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -126,7 +143,9 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRemoveStaff, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRemoveBooks, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnEditAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
                 .addComponent(lblDesigner)
                 .addContainerGap())
         );
@@ -146,6 +165,10 @@ public class Dashboard extends javax.swing.JFrame {
     private void btnAddStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddStaffActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAddStaffActionPerformed
+
+    private void btnEditAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditAdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEditAdminActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,6 +199,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnAddBooks;
     private javax.swing.JButton btnAddStaff;
     private javax.swing.JButton btnBooksAvailable;
+    private javax.swing.JButton btnEditAdmin;
     private javax.swing.JButton btnRemoveBooks;
     private javax.swing.JButton btnRemoveStaff;
     private javax.swing.JButton btnStaffDetails;
